@@ -1,0 +1,116 @@
+﻿@model CalculateDistance.Model.Address
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="container">
+    <h2>Enter Fielded Address</h2>
+    @using (Html.BeginForm("Geocode", "Home", FormMethod.Post))
+    {
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreetNumber, "Street Number", htmlAttributes: new {@class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StreetNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StreetNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreetName, "Street Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StreetName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StreetName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreetNumber, "Street Suffix", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StreetSuffix, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StreetSuffix, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.City, "City", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreetNumber, "State", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreetNumber, "Zip code", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+@*<div>
+    <h2>Fielded Address</h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="StreetNumber" class="control-label">Street Number </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="StreetNumber" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="StreetName" class="control-label">Street Name </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="StreetName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="StreetSuffix" class="control-label">Street Suffix </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="StreetSuffix" />
+            </div>            
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="City" class="control-label">City </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="City" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="State" class="control-label">State </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="State" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="Zip" class="control-label">Zip Code </label>
+            </div>
+            <div class="col-xs-2">
+                <input type="text" id="Zip" />
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>*@
