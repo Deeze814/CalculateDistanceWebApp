@@ -1,5 +1,5 @@
 ﻿
-namespace CalculateDistance.Model
+namespace CalculateDistance.Domain
 {
     public class Address
     {
