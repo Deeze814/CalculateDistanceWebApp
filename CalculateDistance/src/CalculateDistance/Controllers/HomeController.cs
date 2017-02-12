@@ -23,7 +23,7 @@ namespace CalculateDistance.Controllers
         }
 
         [HttpPost]
-        public IActionResult Geocode(Transit transit)
+        public IActionResult CalculateDistance(Transit transit)
         {
             //string request = $"{baseUrl}{origin}&destinations={dest}{requestApiKey}";
             var response = MakeRequest();

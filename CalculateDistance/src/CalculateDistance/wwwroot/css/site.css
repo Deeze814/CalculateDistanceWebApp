@@ -36,3 +36,19 @@ textarea {
     display: none
   }
 }
+
+.half{
+    min-width: 50%;    
+}
+
+.whole{
+    width: 100%;
+}
+
+div.whole .half{
+    display: inline-block;
+}
+
+#button-div{
+    padding-top: 5%;
+}
